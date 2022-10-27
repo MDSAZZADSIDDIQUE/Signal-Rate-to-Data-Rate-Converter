@@ -5,8 +5,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Signal Rate to Data Rate Converter</h1>
-    <form action="dataRateCalculation.php" method="POST" style="display: inline-block;">
+    <h1>Digital Rate to Signal Rate Converter</h1>
+    <form action="signal_rate_calculation.php" method="POST" style="display: inline-block;">
         <fieldset>
             <br>
             <label>Case Factor: </label>
@@ -14,8 +14,8 @@
             <input type="number" name="caseFactorHigherValue" id="case_factor_higher_value" placeholder="Lower Value">
             <br>
             <br>
-            <label for="data_rate">Data Rate: </label>
-            <input type="number" name="dataRate" id="date_rate">
+            <label for="signal_rate">Signal Rate: </label>
+            <input type="number" name="signal_rate" id="signal_rate">
             <label for="data_rate">bps</label>
             <br>
             <br>
@@ -33,11 +33,11 @@
     session_start();
     if (isset($_SESSION['status']))
     {
-        printf('Signal Rate: %s bps', $_SESSION['signalRate']);
+        printf('Data Rate: %s bps', $_SESSION['dataRate']);
     }
     ?>
     <br>
     <br>
-    <a href="digital_rate_to_signal_rate_converter.php">Digital Rate to Signal Rate Converter</a>
+    <a href="index.php">Signal Rate to Data Rate Converter</a>
 </body>
 </html>
